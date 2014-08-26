@@ -98,12 +98,12 @@ public class CityConnect {
 	 * ====================================================================
 	 */
 	public static void main(String[] args) {
-		showToUser(WELCOME_MESSAGE);
+		System.out.println(WELCOME_MESSAGE);
 		while (true) {
 			System.out.print("Enter command:");
 			String command = scanner.nextLine();
 			String feedback = executeCommand(command);
-			showToUser(feedback);
+			System.out.println(feedback);
 		}
 	}
 
@@ -115,9 +115,6 @@ public class CityConnect {
 	 * ====================================================================
 	 */
 
-	private static void showToUser(String text) {
-		System.out.println(text);
-	}
 
 	public static String executeCommand(String userCommand) {
 		if (userCommand.trim().equals("")){
@@ -350,6 +347,7 @@ changes made:
 2. inline temp : removed string userCommand = command and just used command
 3. rename boolean method: sameRoute to isSameRoute
 4. added {} to two if, elses in executecommand and determinecommandtype
+5. inline method showtouser
 
 
 */
