@@ -331,8 +331,7 @@ public class CityConnect {
 	}
 
 	private static String getFirstWord(String userCommand) {
-		String commandTypeString = userCommand.trim().split("\\s+")[0];
-		return commandTypeString;
+		return userCommand.trim().split("\\s+")[0];
 	}
 
 	private static String[] splitParameters(String commandParametersString) {
@@ -348,6 +347,8 @@ changes made:
 3. rename boolean method: sameRoute to isSameRoute
 4. added {} to two if, elses in executecommand and determinecommandtype
 5. inline method showtouser
+6. changed location to getSlotLocation
+7. getfirstword method removed extra temp inline temp
 
 
 */
