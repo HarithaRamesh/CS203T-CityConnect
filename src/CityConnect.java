@@ -102,8 +102,7 @@ public class CityConnect {
 		while (true) {
 			System.out.print("Enter command:");
 			String command = scanner.nextLine();
-			String userCommand = command;
-			String feedback = executeCommand(userCommand);
+			String feedback = executeCommand(command);
 			showToUser(feedback);
 		}
 	}
@@ -342,3 +341,13 @@ public class CityConnect {
 		return parameters;
 	}
 }
+/*
+
+changes made:
+1. rename method? : COMMAND_TYPE to CommandType
+2. inline temp : removed string userCommand = command and just used command
+
+
+*/
+
+
