@@ -120,8 +120,9 @@ public class CityConnect {
 	}
 
 	public static String executeCommand(String userCommand) {
-		if (userCommand.trim().equals(""))
+		if (userCommand.trim().equals("")){
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
+		}
 
 		String commandTypeString = getFirstWord(userCommand);
 
@@ -165,8 +166,9 @@ public class CityConnect {
 	 *            is the first word of the user command
 	 */
 	private static CommandType determineCommandType(String commandTypeString) {
-		if (commandTypeString == null)
+		if (commandTypeString == null){
 			throw new Error("command type string cannot be null!");
+		}
 
 		if (commandTypeString.equalsIgnoreCase("addroute")) {
 			return CommandType.ADD_ROUTE;
@@ -347,6 +349,7 @@ changes made:
 1. rename method? : COMMAND_TYPE to CommandType
 2. inline temp : removed string userCommand = command and just used command
 3. rename boolean method: sameRoute to isSameRoute
+4. added {} to two if, elses in executecommand and determinecommandtype
 
 
 */
