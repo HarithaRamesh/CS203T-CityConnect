@@ -335,8 +335,8 @@ public class CityConnect {
 	}
 
 	private static String[] splitParameters(String commandParametersString) {
-		String[] parameters = commandParametersString.trim().split("\\s+");
-		return parameters;
+		 return commandParametersString.trim().split("\\s+");
+
 	}
 }
 /*
@@ -349,6 +349,7 @@ changes made:
 5. inline method showtouser
 6. changed location to getSlotLocation
 7. getfirstword method removed extra temp inline temp
+8. split parameters removed extra temp, inline temp
 
 
 */
